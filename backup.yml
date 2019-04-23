@@ -1,0 +1,11 @@
+---
+- name: Backup
+  hosts: localhost
+  gather_facts: false
+  roles:
+    - fake_modules
+  tasks:
+    - shell: pwd
+    - shell: ls
+    - command: whoami
+...

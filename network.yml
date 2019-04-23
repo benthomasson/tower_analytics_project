@@ -1,0 +1,10 @@
+---
+- name: Network
+  hosts: localhost
+  gather_facts: false
+  roles:
+    - fake_modules
+  tasks:
+    - fake:
+    - net_interface:
+...
