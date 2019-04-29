@@ -5,6 +5,5 @@
   roles:
     - fake_modules
   tasks:
-    - fake:
     - net_interface:
 ...
