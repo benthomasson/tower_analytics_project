@@ -1,0 +1,20 @@
+---
+- name: Deploy
+  hosts: localhost
+  gather_facts: false
+  roles:
+    - fake_modules
+  tasks:
+    - shell: pwd
+    - shell: ls
+    - command: whoami
+    - pause:
+        minutes: "{{item}}"
+      with_random_choice:
+          - 5
+          - 10
+          - 15
+          - 20
+...
+
+
