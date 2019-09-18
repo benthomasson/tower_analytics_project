@@ -1,5 +1,5 @@
 ---
-- name: Verify
+- name: Deploy
   hosts: localhost
   gather_facts: false
   roles:
@@ -8,10 +8,13 @@
     - shell: pwd
     - shell: ls
     - command: whoami
-    - assert:
-        that: "{{item}}"
+    - pause:
+        minutes: "{{item}}"
       with_random_choice:
-          - false
-          - true
+          - 5
+          - 10
+          - 15
+          - 20
 ...
+
 

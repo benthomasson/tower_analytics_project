@@ -1,0 +1,37 @@
+---
+- name: Verify Cloud Deployment
+  hosts: localhost
+  gather_facts: false
+  roles:
+    - fake_modules
+  tasks:
+    - oc:
+    - assert:
+    - assert:
+        that: true
+    - assert:
+        that: true
+    - assert:
+        that: true
+    - assert:
+        that: true
+    - assert:
+        that: true
+    - assert:
+        that: true
+    - assert:
+        that: true
+    - assert:
+        that: true
+    - assert:
+        that: true
+    - assert:
+        that: true
+        that: true
+    - assert:
+        that: "{{item}}"
+      with_random_choice:
+          - false
+          - true
+...
+
