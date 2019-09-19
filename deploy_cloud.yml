@@ -1,0 +1,11 @@
+---
+- name: Deploy to cloud
+  hosts: localhost
+  gather_facts: false
+  roles:
+    - fake_modules
+  tasks:
+    - oc:
+...
+
+
